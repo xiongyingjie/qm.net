@@ -1,4 +1,0 @@
-﻿
-
-
-qx.form.render("demo");
