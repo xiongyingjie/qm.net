@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>xyj.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyName>xyj.core</AssemblyName>
+    <RootNamespace>xyj.core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Web\Mvc\Html\**" />
+    <EmbeddedResource Remove="Web\Mvc\Html\**" />
+    <None Remove="Web\Mvc\Html\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="IOCUtility.cs" />
+    <Compile Remove="Utility\IOCUtility.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Web\HttpContext.cs.delete" />
+    <None Remove="Web\HttpContextAccessor.cs.delete" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="FastExcel" Version="2.2.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.6.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="MySql.Data" Version="6.10.4" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.12.0-beta2" />
+    <PackageReference Include="QRCoder" Version="1.3.2" />
+    <PackageReference Include="RestSharp" Version="106.2.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

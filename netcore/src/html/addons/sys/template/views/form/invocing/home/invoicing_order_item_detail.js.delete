@@ -1,0 +1,28 @@
+﻿render(function(model){
+var cfg=[];
+cfg.push(
+    group([
+hide('invoicing_order_item-invoicing_order_item_id'),
+hide('invoicing_order_item-invoicing_order_id'),
+input('商品编号', 'invoicing_order_item-product_id', '', '4', {min:1,max:50}),
+input('商品名称', 'invoicing_order_item-product_name', '', '4', {min:1,max:50}),
+input('商品单价', 'invoicing_order_item-price', '', '4', {float:true}),
+input('订购数量', 'invoicing_order_item-ordered_num', '', '4', {int:true}),
+input('订单金额', 'invoicing_order_item-ordered_price', '', '4'),
+input('折扣率', 'invoicing_order_item-discount', '', '4'),
+input('折扣金额', 'invoicing_order_item-discount_price', '', '4'),
+input('应付总额', 'invoicing_order_item-total_pay_price', '', '4'),
+input('实付总额', 'invoicing_order_item-total_payed_price', '', '4'),
+hide('invoicing_order_item-return_num'),
+hide('invoicing_order_item-return_price'),
+hide('invoicing_order_item-selled_num'),
+hide('invoicing_order_item-outed_num'),
+hide('invoicing_order_item-ordered_note'),
+hide('invoicing_order_item-selled_note'),
+hide('invoicing_order_item-discount_note'),
+hide('invoicing_order_item-outed_note'),
+hide('invoicing_order_item-return_note'),
+hide('invoicing_order_item-note')
+],'标题'));
+return cfg;
+},'','erp.invoicing.invoicing_order_item@find&id='+q.id,'详情');

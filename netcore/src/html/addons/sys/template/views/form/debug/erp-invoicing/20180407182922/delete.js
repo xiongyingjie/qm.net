@@ -1,0 +1,1 @@
+﻿erp.invoicing.in_out_stotage_record@delete
